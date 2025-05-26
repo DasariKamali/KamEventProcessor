@@ -23,13 +23,13 @@ public class EventHubProcessorService implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        logger.info("Starting EventProcessorClient...");
+        logger.info("Starting EventProcessorClient");
         eventProcessorClient.start();
     }
 
     @PreDestroy
     public void shutdown() {
-        logger.info("Stopping EventProcessorClient...");
+        logger.info("Stopping EventProcessorClient");
         eventProcessorClient.stop();
     }
 }
